@@ -1,7 +1,7 @@
 import wave
 import binascii
 import struct
-inputWaveFile='yes.wav'
+inputWaveFile='down.wav'
 outputHeaderFile='wav_data.h'
 
 wr=wave.open(inputWaveFile,'rb');
@@ -14,6 +14,7 @@ print(wr.getsampwidth())
 print(wr.getframerate())
 
 lenght=wr.getnframes();
+print(lenght)
 
 for i in range(16000):
     if(i>=lenght):
@@ -24,7 +25,7 @@ for i in range(16000):
         sh=struct.unpack('h', ba)[0]
         fw.write(str(sh));
         fw.write(',')
-        print(sh)
+        #print(sh)
         
 
 wr.close();
@@ -33,3 +34,4 @@ wr.close();
 fw.write('}');
 fw.close();
 
+print('finish')
