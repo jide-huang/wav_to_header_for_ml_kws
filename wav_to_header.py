@@ -1,7 +1,7 @@
 import wave
 import binascii
 import struct
-inputWaveFile='down.wav'
+inputWaveFile='Ht03.wav'
 outputHeaderFile='wav_data.h'
 
 wr=wave.open(inputWaveFile,'rb');
